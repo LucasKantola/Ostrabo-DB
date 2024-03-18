@@ -3,22 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document Database</title>
-    <!-- Include any CSS files here -->
+    <title>Östrabo DB</title>
+    <link rel="stylesheet" href="{{asset("style/landing.css")}}">
 </head>
 <body>
     <header>
-        <div class="logo">
-            <img src="{{ asset('public\O1-logo.png') }}" alt="Logo 1">
-            <img src="{{ asset('public\Uddevalla gymnasieskola logotyp.png') }}" alt="Logo 2">
+        <div class="logo">  
+            <img src="{{ asset('Uddevalla gymnasieskola logotyp.png') }}" alt="Uddevalla Gymnasieskola logotyp">
+            <img src="{{ asset('O1-logo.png') }}" alt="Östrabo1 Uddevalla Gymnasieskola logotyp">
         </div>
     </header>
     <main>
         <div class="search-bar">
-            <form action="{{ route('search') }}" method="GET">
-                <input type="text" name="query" placeholder="Search...">
-                <button type="submit">Search</button>
-            </form>
+
         </div>
         <div class="browse-options">
             <button>Browse</button>
@@ -28,6 +25,9 @@
         </div>
         <!-- Document listings can go here -->
     </main>
+    <footer>
+        <p>&copy; 2024 Lucas Kantola TE21B</p>
+    </footer>
     <!-- Include any JS files here -->
 </body>
 </html>
