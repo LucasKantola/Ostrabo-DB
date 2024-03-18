@@ -1,0 +1,69 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic styles for header */
+header {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+}
+
+.logo img {
+    width: 100px; /* Adjust as needed */
+    height: auto;
+    margin: 0 10px; /* Add space between logos */
+}
+
+/* Style for search bar */
+.search-bar {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.search-bar input[type="text"] {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Style for browse options */
+.browse-options {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.browse-options button {
+    padding: 10px 20px;
+    margin: 0 5px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.browse-options button:hover {
+    background-color: #0056b3;
+}
+
+/* Basic styles for main content */
+main {
+    padding: 20px;
+}
