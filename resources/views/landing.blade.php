@@ -16,24 +16,29 @@
         </div>
         <nav>
             <ul>
-                <li><a href="{{ route('home') }}">Home</a></li>
-                <li><a href="{{ url('/browse') }}">Browse</a></li>
-                <li><a href="#">Add Work</a></li>
+                <li><a href="{{ route('home') }}">Hem</a></li>
+                <li><a href="{{ url('/browse') }}">Utforska</a></li>
+                <li><a href="#">Nytt arbete</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <h1 class="welcome">Välkommen till Östrabo DB</h1>
-        <h2></h2>
+        <h2 class="subtitle">En databas för Gymnasiearbeten genom tiderna. Ett bra ställe att hitta inspiration och se vad för kul andra har hittat på</h2>
         <div class="search-bar">
-            <input type="text" placeholder="Search...">
-            <button>Search</button>
+            <input type="text" placeholder="Sök...">
+            <button>
+                <span class="shadow"></span>
+                <span class="edge"></span>
+                <span class="front text"><img src="{{asset("svg/search.svg")}}" alt="search icon svg"> Sök</span>
+            </button>
         </div>
         <div class="browse-options">
             <button>Utforska</button>
             <button>Praktiska Arbeten</button>
         </div>
     </main>
+    
     <footer>
         <p class="center bottom">&copy; 2024 Lucas Kantola TE21B</p>
     </footer>
