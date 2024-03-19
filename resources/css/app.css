@@ -1,69 +1,74 @@
-/* Reset default margin and padding */
-* {
+/* Resetting default margin and padding */
+body, h1, h2, h3, p, ul, li {
     margin: 0;
     padding: 0;
+}
+
+/* Setting box-sizing to border-box for all elements */
+*, *::before, *::after {
     box-sizing: border-box;
 }
 
-/* Basic styles for header */
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
 header {
-    background-color: #f0f0f0;
+    background-color: #333;
+    color: #fff;
     padding: 20px;
-    text-align: center;
 }
 
 .logo img {
-    width: 100px; /* Adjust as needed */
+    max-width: 100%;
     height: auto;
-    margin: 0 10px; /* Add space between logos */
 }
 
-/* Style for search bar */
+main {
+    padding: 20px;
+}
+
 .search-bar {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.search-bar input[type="text"] {
-    padding: 10px;
-    width: 300px;
-    border: 1px solid #ccc;
+    background-color: #fff;
+    padding: 20px;
     border-radius: 5px;
-    font-size: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.search-bar button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    border: none;
-    border-radius: 5px;
-    color: #fff;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-/* Style for browse options */
 .browse-options {
-    text-align: center;
     margin-top: 20px;
 }
 
 .browse-options button {
-    padding: 10px 20px;
-    margin: 0 5px;
     background-color: #007bff;
-    border: none;
-    border-radius: 5px;
     color: #fff;
-    font-size: 16px;
+    border: none;
+    padding: 10px 20px;
+    margin-right: 10px;
+    border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 .browse-options button:hover {
     background-color: #0056b3;
 }
 
-/* Basic styles for main content */
-main {
+footer {
+    background-color: #333;
+    color: #fff;
     padding: 20px;
+    text-align: center;
+}
+
+.center {
+    text-align: center;
+}
+
+.bottom {
+    margin-top: 20px;
 }
