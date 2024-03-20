@@ -216,3 +216,36 @@ main > .search-bar img{
     z-index: 10;
     filter: invert(1);
 }
+
+/*Articles under searchbar*/
+main > .browse-options{
+    display: flex;
+
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 60%;
+    height: 400px;
+    padding: 50px;
+}
+main > .browse-options > article{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 100%;
+    margin: 20px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+.browse-options > article:hover{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+main > .browse-options > article > img{
+    width: 100px;
+    aspect-ratio: auto;
+}
