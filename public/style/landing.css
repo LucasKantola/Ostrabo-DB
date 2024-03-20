@@ -113,8 +113,7 @@ main > .search-bar > input[type="text"] {
 }
 
 main > .search-bar > input[type="text"]:focus {
-    background-color: var(--primary);
-    color: white;
+    outline: var(--accent) 2px solid;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 

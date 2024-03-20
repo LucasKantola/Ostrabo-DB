@@ -34,8 +34,9 @@
             </button>
         </div>
         <div class="browse-options">
-            <button>Utforska</button>
-            <button>Praktiska Arbeten</button>
+            <article>
+                <img src="{{asset("svg/plus.svg")}}" alt="plus icon svg">
+            </article>
         </div>
     </main>
     
