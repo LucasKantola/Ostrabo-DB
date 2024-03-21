@@ -36,18 +36,25 @@
         <div class="browse-options">
             <article>
                 <img src="{{asset("svg/explore.svg")}}" alt="plus icon svg">
-                <h4>Få inspiration av gammla arbeten!</h4>
-                <p>Utforska inlämnade Gymnasiearbeten skapade av elever på Östrabo1 genom tiderna.</p>
+                <div class="text-container">
+                    <h4>Få inspiration av gammla arbeten!</h4>
+                    <p>Utforska inlämnade Gymnasiearbeten skapade av elever på Östrabo1 genom tiderna.</p>
+                </div>
             </article>
             <article>
                 <img src="{{asset("svg/plus.svg")}}" alt="plus icon svg">
-                <h4>Kolla på gammla praktiska arbeten!</h4>
-                <p>Kika på hur gammla praktiska arbeten har blivit.</p>
+                <span></span>
+                <div class="text-container">
+                    <h4>Kolla på gammla praktiska arbeten!</h4>
+                    <p>Kika på hur gammla praktiska arbeten har blivit.</p>
+                </div>
             </article>
             <article>
                 <img src="{{asset("svg/plus.svg")}}" alt="plus icon svg">
-                <h4>Lägg till ditt arbete!</h4>
-                <p>Lämna in ditt färdiga arbete till databasen!</p>
+                <div class="text-container">
+                    <h4>Lägg till ditt arbete!</h4>
+                    <p>Lämna in ditt färdiga arbete till databasen!</p>
+                </div>
             </article>
         </div>
     </main>
