@@ -1,58 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Östrabo DB</title>
-    <link rel="stylesheet" href="https://use.typekit.net/skk6qik.css">
-    <link rel="stylesheet" href="{{asset("style/landing.css")}}">
-    <link rel="stylesheet" href="{{asset("style/defaults.css")}}">
-</head>
-<body>
-    <header>
-        <div class="logo">  
-            <img src="{{ asset('Uddevalla gymnasieskola logotyp.png') }}" alt="Uddevalla Gymnasieskola logotyp">
-            <img src="{{ asset('O1-logo.png') }}" alt="Östrabo1 Uddevalla Gymnasieskola logotyp">
-        </div>
-        <nav>
-            <ul>
-                <li><a href="{{ route('home') }}">Hem</a></li>
-                <li><a href="{{ url('/browse') }}">Utforska</a></li>
-                <li><a href="#">Nytt arbete</a></li>
-            </ul>
-        </nav>
-    </header>
+@include('../defaults/meta')
+<body> 
+    @include('../defaults/header')
     <main>
         <h1 class="welcome">Välkommen till Östrabo DB</h1>
         <h2 class="subtitle">En databas för Gymnasiearbeten genom tiderna. Ett bra ställe att hitta inspiration och se vad för kul andra har hittat på</h2>
-        <div class="search-bar">
-            <input type="text" placeholder="Sök...">
-            <button>
+        <form class="search-bar" method="POST" action="{{route("search")}}">
+            <input type="text" name="search" placeholder="Sök...">
+            <button id="submit" for="submit">
                 <span class="shadow"></span>
                 <span class="edge"></span>
                 <span class="front text"><img src="{{asset("svg/search.svg")}}" alt="search icon svg"> Sök</span>
             </button>
-        </div>
+        </form>
         <div class="browse-options">
             <article>
                 <img src="{{asset("svg/explore.svg")}}" alt="plus icon svg">
+                <span></span>
                 <div class="text-container">
-                    <h4>Få inspiration av gammla arbeten!</h4>
-                    <p>Utforska inlämnade Gymnasiearbeten skapade av elever på Östrabo1 genom tiderna.</p>
+                    <h3>Få inspiration</h3>
+                    <p>av gammla arbeten inlämnade genom tiderna!</p>
+                </div>
+            </article>
+            <article>
+                <img src="{{asset("svg/wrench.svg")}}" alt="plus icon svg">
+                <span></span>
+                <div class="text-container">
+                    <h3>Kika på</h3>
+                    <p>praktiska arbeten och deras resultat!</p>
                 </div>
             </article>
             <article>
                 <img src="{{asset("svg/plus.svg")}}" alt="plus icon svg">
                 <span></span>
                 <div class="text-container">
-                    <h4>Kolla på gammla praktiska arbeten!</h4>
-                    <p>Kika på hur gammla praktiska arbeten har blivit.</p>
-                </div>
-            </article>
-            <article>
-                <img src="{{asset("svg/plus.svg")}}" alt="plus icon svg">
-                <div class="text-container">
-                    <h4>Lägg till ditt arbete!</h4>
+                    <h3>Lägg till ditt arbete!</h3>
                     <p>Lämna in ditt färdiga arbete till databasen!</p>
                 </div>
             </article>
@@ -60,7 +41,7 @@
     </main>
     
     <footer>
-        <p class="center bottom">&copy; 2024 Lucas Kantola TE21B</p>
+        <p>&copy; 2024 Lucas Kantola TE21B</p>
     </footer>
 </body>
 </html>

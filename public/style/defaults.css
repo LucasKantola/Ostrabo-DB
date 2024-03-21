@@ -1,9 +1,11 @@
 :root{
     --text: #0e0d0b;
-    --background: #fbfaf9;
+    --background: #FCFAF6;
     --primary: #ffa200;
     --secondary: #ddc08d;
     --accent: #e3b464;
+
+    --secondary-background: white;
 
     --font: 'Muli', sans-serif;
 }
