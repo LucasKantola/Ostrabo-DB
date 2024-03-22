@@ -5,16 +5,16 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::post('/', [HomeController::class, 'search'])->name('home.search');
 
-Route::get('/search', [searchController::class, 'index'])->name('search');
-Route::post('/search', [searchController::class, 'search'])->name('search');
+Route::get('/search', [searchController::class, 'search'])->name('search.search');
+
+Route::get("/show", function(){
+    return view("show");
+})->name("show");
 
 Route::get("/browse", function(){
     return view("browse");
-});
-
-Route::get("/viewer", function(){
-    return view("viewer");
 });
 
 Route::get("/add", function(){

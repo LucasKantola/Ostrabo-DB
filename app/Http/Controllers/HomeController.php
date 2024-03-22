@@ -11,10 +11,4 @@ class HomeController extends Controller
     {
         return view('landing');
     }
-
-    public function search(Request $request)
-    {
-        $query = $request->input('search');
-        return view('search', ['query' => $query]);
-    }
 }
