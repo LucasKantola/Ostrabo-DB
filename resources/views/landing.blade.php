@@ -12,7 +12,7 @@
         @include('../defaults/searchbar')
         
         <div class="flex-row browse-options">
-            <article>
+            <article class="selectable">
                 <img src="{{asset("svg/explore.svg")}}" alt="plus icon svg">
                 <span></span>
                 <div class="text-container">
@@ -20,7 +20,7 @@
                     <p>av gammla arbeten inlämnade genom tiderna!</p>
                 </div>
             </article>
-            <article>
+            <article class="selectable">
                 <img src="{{asset("svg/wrench.svg")}}" alt="plus icon svg">
                 <span></span>
                 <div class="text-container">
@@ -28,7 +28,7 @@
                     <p>praktiska arbeten och deras resultat!</p>
                 </div>
             </article>
-            <article>
+            <article class="selectable">
                 <img src="{{asset("svg/plus.svg")}}" alt="plus icon svg">
                 <span></span>
                 <div class="text-container">

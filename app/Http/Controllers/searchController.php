@@ -31,13 +31,46 @@ class searchController extends Controller
                     "description" => "Detta är ett gymnasiearbete som handlar om något annat"
                 ],
                 (object)[
+                    "id" => 1,
+                    "date" => "2021-05-12",
+                    "author" => "John Doe",
+                    "class" => "TE18D",
+                    "title" => $request->input('search'),
+                    "description" => "Detta är ett gymnasiearbete som handlar om något"
+                ],
+                (object)[
+                    "id" => 2,
+                    "date" => "2021-05-12",
+                    "author" => "Jane Doe",
+                    "class" => "TE19D",
+                    "title" => $request->input('search'),
+                    "description" => "Detta är ett gymnasiearbete som handlar om något annat"
+                ],
+                (object)[
+                    "id" => 1,
+                    "date" => "2021-05-12",
+                    "author" => "John Doe",
+                    "class" => "TE18D",
+                    "title" => $request->input('search'),
+                    "description" => "Detta är ett gymnasiearbete som handlar om något"
+                ],
+                (object)[
+                    "id" => 2,
+                    "date" => "2021-05-12",
+                    "author" => "Jane Doe",
+                    "class" => "TE19D",
+                    "title" => $request->input('search'),
+                    "description" => "Detta är ett gymnasiearbete som handlar om något annat"
+                ],
+                (object)[
                     "id" => 3,
                     "date" => "2021-05-12",
                     "author" => "John Doe",
                     "class" => "TE18D",
                     "title" => $request->input('search'),
                     "description" => "Detta är ett gymnasiearbete som handlar om något helt annat"
-                ]];
+                ]
+            ];
         }
         else{
             $results = [

@@ -44,15 +44,9 @@ main > .browse-options > article{
     height: 100%;
     margin: 20px;
     padding: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
-    transition: box-shadow 0.3s ease;
-    cursor: pointer;
     border-radius: 5px;
 }
-.browse-options > article:hover{
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
-    text-decoration: underline;
-}
+
 main > .browse-options > article > img{
     display: flex;
     flex-direction: row;

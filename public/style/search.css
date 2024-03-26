@@ -32,6 +32,7 @@ main > .search-bar > input[type="text"]{
 main > article{
     background-color: var(--secondary-background);
     width: 80%;
+    height: 100px;
     margin: 10px;
     padding: 20px;
     border-radius: 5px;
@@ -41,8 +42,6 @@ main > article:nth-child(0){
 }
 
 main > article > a{
-    display: flex;
-    flex-direction: column;
     text-decoration: none;
     color: var(--text);
 }
@@ -57,16 +56,13 @@ main > article > a > p{
     color: var(--text);
     margin-bottom: 3px;
 }
-main > article > a > a{
-    display: inline;
-    width: 50%;
-    color: var(--text);
-}
+
 main > article > a > .bottom{
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
 }
+
 article .bottom > .author{
     display: inline;
     order: 1;
