@@ -11,7 +11,7 @@ main{
 }
 
 main > .search-bar > input[type="text"]{
-    width: 60% !important;
+    width: 80% !important;
 }
 
 .results, .r-amount, .r-search{
@@ -27,47 +27,46 @@ main > .search-bar > input[type="text"]{
 }
 .r-amount{
     color: var(--text);
+    margin-bottom: 20px;
 }
 
-main > article{
-    background-color: var(--secondary-background);
+main .article-container{
     width: 80%;
-    height: 100px;
+    padding: 0 20px;
+}
+
+main .article-container > article{
+    background-color: var(--secondary-background);
+    height: 150px;
     margin: 10px;
     padding: 20px;
     border-radius: 5px;
 }
-main > article:nth-child(0){
+main .article-container > article:nth-child(0){
     margin-top: 20px;
 }
 
-main > article > a{
+main .article-container > article > a{
     text-decoration: none;
     color: var(--text);
 }
 
-main > article > a > h2{
+main .article-container > article > .right{
+    width: 30%;
+}
+
+main .article-container .left > h2{
     display: inline;
     color: var(--primary);
     margin-bottom: 5px;
 }
-main > article > a > p{
+
+main .article-container > .bottom{
+    margin-top: auto;
+}
+
+main .article-container > p{
     display: inline;
     color: var(--text);
     margin-bottom: 3px;
-}
-
-main > article > a > .bottom{
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-}
-
-article .bottom > .author{
-    display: inline;
-    order: 1;
-}
-article .bottom > .date{
-    display: inline;
-    order: 2;
 }

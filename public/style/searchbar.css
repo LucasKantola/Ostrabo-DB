@@ -1,12 +1,8 @@
-main > .search-bar{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+main > .form-search{
     height: 100px;
 }
 
-main > .search-bar > input[type="text"] {
+main > .form-search > input[type="text"] {
     width: 50%;
     height: 50px;
     padding: 10px;
@@ -17,13 +13,13 @@ main > .search-bar > input[type="text"] {
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-main > .search-bar > input[type="text"]:focus {
+main > .form-search > input[type="text"]:focus {
     outline: var(--accent) 2px solid;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
 /*Button styling for searchbar*/
-main > .search-bar button {
+main > .form-search button {
     margin: 15px;
     position: relative;
     border: none;
@@ -36,7 +32,7 @@ main > .search-bar button {
     touch-action: manipulation;
 }
    
-main > .search-bar .shadow {
+main > .form-search .shadow {
     position: absolute;
     top: 0;
     left: 0;
@@ -47,11 +43,13 @@ main > .search-bar .shadow {
     will-change: transform;
     transform: translateY(2px);
     transition: transform
+      
+      
        600ms
        cubic-bezier(.3, .7, .4, 1);
 }
    
-main > .search-bar .edge {
+main > .form-search .edge {
     position: absolute;
     top: 0;
     left: 0;
@@ -67,9 +65,7 @@ main > .search-bar .edge {
     );  
 }
    
-main > .search-bar .front {
-    display: block;
-    position: relative;
+main > .form-search .front {
     padding: 14px 25px;
     border-radius: 8px;
     font-size: 1.1rem;
@@ -82,42 +78,55 @@ main > .search-bar .front {
        cubic-bezier(.3, .7, .4, 1);
 }
    
-main > .search-bar button:hover {
+main > .form-search button:hover {
     filter: brightness(110%);
 }
    
-main > .search-bar button:hover .front {
+main > .form-search button:hover .front {
     transform: translateY(-6px);
     transition: transform
        250ms
        cubic-bezier(.3, .7, .4, 1.5);
 }
    
-main > .search-bar button:active .front {
+main > .form-search button:active .front {
     transform: translateY(-2px);
     transition: transform 34ms;
 }
    
-main > .search-bar button:hover .shadow {
+main > .form-search button:hover .shadow {
     transform: translateY(4px);
     transition: transform
        250ms
        cubic-bezier(.3, .7, .4, 1.5);
 }
    
-main > .search-bar button:active .shadow {
+main > .form-search button:active .shadow {
     transform: translateY(1px);
     transition: transform 34ms;
 }
    
-main > .search-bar button:focus:not(:focus-visible) {
+main > .form-search button:focus:not(:focus-visible) {
     outline: none;
 }
-main > .search-bar img{
+main > .form-search img{
     position: relative;
-    width: 15px;
+    width: 20px;
     margin-right: 5px;
     aspect-ratio: auto;
     z-index: 10;
     filter: invert(1);
+}
+
+/*Media queries for searchbar*/
+@media screen and (max-width: 1199px) {
+    main > .form-search img {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    main > .form-search img {
+        display: inline !important;
+    }
 }

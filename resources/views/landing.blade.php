@@ -31,16 +31,13 @@
             <article class="selectable">
                 <img src="{{asset("svg/plus.svg")}}" alt="plus icon svg">
                 <span></span>
-                <div class="text-container">
+                <div class="text-container flex-column flex-center">
                     <h3>Lägg till ditt arbete!</h3>
                     <p>Lämna in ditt färdiga arbete till databasen!</p>
                 </div>
             </article>
         </div>
     </main>
-    
-    <footer>
-        <p>&copy; 2024 Lucas Kantola TE21B</p>
-    </footer>
+    @include('../defaults/footer')
 </body>
 </html>
