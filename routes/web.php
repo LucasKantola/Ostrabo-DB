@@ -7,7 +7,7 @@ use App\Http\Controllers\HomeController;
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::post('/', [HomeController::class, 'search'])->name('home.search');
 
-Route::get('/search', [searchController::class, 'search'])->name('search.search');
+Route::get('/search', [searchController::class, 'search'])->name('search');
 
 Route::get("/show", function(){
     return view("show");

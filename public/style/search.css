@@ -1,0 +1,77 @@
+main{
+    display: flex;
+    width: 60%;
+    margin: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: var(--background);
+    padding: 20px;
+
+}
+
+main > .search-bar > input[type="text"]{
+    width: 60% !important;
+}
+
+.results, .r-amount, .r-search{
+    height: auto;
+    margin: 20px;
+}
+.r-amount, .r-search{
+    margin: 0;
+    margin-top: 10px;
+}
+.r-search{
+    color: var(--primary);
+}
+.r-amount{
+    color: var(--text);
+}
+
+main > article{
+    background-color: var(--secondary-background);
+    width: 80%;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 5px;
+}
+main > article:nth-child(0){
+    margin-top: 20px;
+}
+
+main > article > a{
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: var(--text);
+}
+
+main > article > a > h2{
+    display: inline;
+    color: var(--primary);
+    margin-bottom: 5px;
+}
+main > article > a > p{
+    display: inline;
+    color: var(--text);
+    margin-bottom: 3px;
+}
+main > article > a > a{
+    display: inline;
+    width: 50%;
+    color: var(--text);
+}
+main > article > a > .bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+article .bottom > .author{
+    display: inline;
+    order: 1;
+}
+article .bottom > .date{
+    display: inline;
+    order: 2;
+}
