@@ -7,7 +7,6 @@ main{
     align-items: flex-start;
     background-color: var(--background);
     padding: 20px;
-
 }
 
 main > .search-bar > input[type="text"]{
@@ -37,36 +36,49 @@ main .article-container{
 
 main .article-container > article{
     background-color: var(--secondary-background);
-    height: 150px;
+    min-height: 150px;
     margin: 10px;
     padding: 20px;
+    padding-bottom: 10px;
     border-radius: 5px;
-}
-main .article-container > article:nth-child(0){
-    margin-top: 20px;
+
+    flex-grow: 1;
+    flex-shrink: 1;
+    text-decoration: none !important;
 }
 
-main .article-container > article > a{
+article > .article-content{
+    height: 125px;
+    justify-content: space-between;
+}
+
+article > .article-content > a{
     text-decoration: none;
-    color: var(--text);
+    cursor: pointer;
 }
 
-main .article-container > article > .right{
-    width: 30%;
+article > .article-content > .article-right{
+    text-decoration: none !important;
 }
 
-main .article-container .left > h2{
-    display: inline;
-    color: var(--primary);
-    margin-bottom: 5px;
-}
-
-main .article-container > .bottom{
+article .article-right > button{
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-out;
     margin-top: auto;
 }
 
-main .article-container > p{
-    display: inline;
-    color: var(--text);
-    margin-bottom: 3px;
+article .bottom{
+    margin-bottom: 5px;
+    margin-top: auto;
+}
+
+article .abstract-dropdown {
+    transition: max-height 0.2s ease-out;
+    overflow: hidden;
+    max-height: 0;
 }

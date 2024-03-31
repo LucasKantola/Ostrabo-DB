@@ -21,6 +21,11 @@ class searchController extends Controller
                     "class" => "TE18D",
                     "title" => $request->input('search'),
                     "subtitle" => "Subtitle 1", // Add subtitle property
+                    "tags" => [
+                        (object)["name" => "tag1"],
+                        (object)["name" => "tag2"],
+                        (object)["name" => "tag3"]
+                    ],
                     "abstract" => "Detta är ett gymnasiearbete som handlar om något" . str_repeat(" Detta är ett gymnasiearbete som handlar om något", 3)
                 ],
                 (object)[
@@ -30,6 +35,11 @@ class searchController extends Controller
                     "class" => "TE19D",
                     "title" => $request->input('search'),
                     "subtitle" => "Subtitle 2", // Add subtitle property
+                    "tags" => [
+                        (object)["name" => "tag1"],
+                        (object)["name" => "tag2"],
+                        (object)["name" => "tag3"]
+                    ],
                     "abstract" => "Detta är ett gymnasiearbete som handlar om något annat" . str_repeat(" Detta är ett gymnasiearbete som handlar om något annat", 3)
                 ],
             ];
@@ -43,6 +53,11 @@ class searchController extends Controller
                     'class' => 'TE18D',
                     'title' => 'Gymnasiearbete 1',
                     'subtitle' => 'Subtitle 1', // Add subtitle property
+                    "tags" => [
+                        (object)["name" => "tag1"],
+                        (object)["name" => "tag2"],
+                        (object)["name" => "tag3"]
+                    ],
                     'abstract' => 'Detta är ett gymnasiearbete som handlar om något' . str_repeat(" Detta är ett gymnasiearbete som handlar om något", 3)
                 ],
                 (object) [
@@ -52,6 +67,11 @@ class searchController extends Controller
                     'class' => 'TE19D',
                     'title' => 'Gymnasiearbete 2',
                     'subtitle' => 'Subtitle 2', // Add subtitle property
+                    "tags" => [
+                        (object)["name" => "tag1"],
+                        (object)["name" => "tag2"],
+                        (object)["name" => "tag3"]
+                    ],
                     'abstract' => 'Detta är ett gymnasiearbete som handlar om något annat' . str_repeat(" Detta är ett gymnasiearbete som handlar om något annat", 3)
                 ],
                 // Add subtitle property to other items in the array

@@ -6,10 +6,12 @@
 function toggleAbstract(event, id) {
     event.stopPropagation();
     var abstractElement = document.getElementById('abstract-' + id);
-    if (abstractElement.style.display === "none") {
-        abstractElement.style.display = "block";
+    if (abstractElement.style.maxHeight === "0px") {
+        event.target.textContent = "Abstract \u25B2";
+        abstractElement.style.maxHeight = abstractElement.scrollHeight + "px";
     } else {
-        abstractElement.style.display = "none";
+        event.target.textContent = "Abstract \u25BC";
+        abstractElement.style.maxHeight = "0px";
     }
 }
 </script>
@@ -24,22 +26,27 @@ function toggleAbstract(event, id) {
         </div>
         <div class="article-container flex-column flex-center">
             @forelse($results as $result)
-                <article class="wh100 selectable">
-                    <a href="{{route("show", $result->id)}}" class="h100 flex-row">
-                        <div class="h100 flex-column">
+                <article class="w100 selectable">
+                    <div class="w100 article-content flex-row">
+                        <a href="{{route("show", $result->id)}}" class="article-left flex-column wh100">
                             <h2>{{$result->title}}</h2>
                             <h3>{{$result->subtitle}}</h3>
                             <div class="bottom">
                                 <p class="author">{{$result->author." ".$result->class}}</p>
                                 <p class="date">{{$result->date}}</p>
                             </div>
+                        </a>
+                        <div class="article-right flex-column">
+                            <div class="w100 tags-container">
+                                @foreach($result->tags as $tag)
+                                    <span class="tag">{{$tag->name}}</span>
+                                @endforeach
+                            </div>
+                            <button onclick="toggleAbstract(event, <?php echo e($result->id); ?>)">Abstract &#x25BC;</button>
                         </div>
-                    </a>
-                    <div class="right flex-column h100">
-                        <button class="abstract-button" onclick="toggleAbstract(event, <?php echo e($result->id); ?>)">Abstract &#x25BC;</button>
-                        <div id="abstract-{{$result->id}}" class="abstract-dropdown" style="display: none;">
-                            <p>{{$result->abstract}}</p>
-                        </div>
+                    </div>
+                    <div id="abstract-{{$result->id}}" class="abstract-dropdown w100">
+                        <p>{{$result->abstract}}</p>
                     </div>
                 </article>
             @empty
