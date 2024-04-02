@@ -9,9 +9,13 @@ function toggleAbstract(event, id) {
     if (abstractElement.style.maxHeight === "0px") {
         event.target.textContent = "Abstract \u25B2";
         abstractElement.style.maxHeight = abstractElement.scrollHeight + "px";
+        // abstractElement.style.margin = "10px";
+        // abstractElement.style.marginTop = "20px";
     } else {
         event.target.textContent = "Abstract \u25BC";
         abstractElement.style.maxHeight = "0px";
+        // abstractElement.style.margin = "0px";
+        // abstractElement.style.marginTop = "0px";
     }
 }
 </script>

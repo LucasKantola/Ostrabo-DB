@@ -30,7 +30,7 @@ main > .search-bar > input[type="text"]{
 }
 
 main .article-container{
-    width: 80%;
+    width: 100%;
     padding: 0 20px;
 }
 
@@ -78,7 +78,14 @@ article .bottom{
 }
 
 article .abstract-dropdown {
-    transition: max-height 0.2s ease-out;
+    transition: max-height 0.1s ease-out, margin 0.1s ease-in;
     overflow: hidden;
     max-height: 0;
+}
+
+article .abstract-dropdown > p{
+    width: auto;
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
