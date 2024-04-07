@@ -36,6 +36,7 @@ main .article-container{
 }
 
 main .article-container > article{
+    position: relative;
     background-color: var(--secondary-background);
     min-height: 150px;
     margin: 10px;
@@ -72,6 +73,9 @@ article .article-right > button{
     transition: background-color 0.2s ease-out;
     margin-top: auto;
 }
+article .article-right > button:focus{
+    outline: 2px solid #989898;
+}
 
 article .bottom{
     margin-bottom: 5px;
@@ -79,13 +83,13 @@ article .bottom{
 }
 
 article .abstract-dropdown {
-    transition: max-height 0.1s ease-out, margin 0.1s ease-in;
+    transition: max-height 0.15s ease-out, margin 0s ease-in;
     overflow: hidden;
 }
 
 article .abstract-dropdown > p{
     width: auto;
     height: 100%;
-    margin: 0;
-    padding: 0;
+    margin-top: 20px;
+    padding-top: 0;
 }
