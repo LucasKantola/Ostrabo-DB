@@ -9,13 +9,9 @@ function toggleAbstract(event, id) {
     if (abstractElement.style.maxHeight === "0px") {
         event.target.textContent = "Abstract \u25B2";
         abstractElement.style.maxHeight = abstractElement.scrollHeight + "px";
-        // abstractElement.style.margin = "10px";
-        // abstractElement.style.marginTop = "20px";
     } else {
         event.target.textContent = "Abstract \u25BC";
         abstractElement.style.maxHeight = "0px";
-        // abstractElement.style.margin = "0px";
-        // abstractElement.style.marginTop = "0px";
     }
 }
 </script>
@@ -49,7 +45,7 @@ function toggleAbstract(event, id) {
                             <button onclick="toggleAbstract(event, <?php echo e($result->id); ?>)">Abstract &#x25BC;</button>
                         </div>
                     </div>
-                    <div id="abstract-{{$result->id}}" class="abstract-dropdown w100">
+                    <div id="abstract-{{$result->id}}" style="max-Height: 0px" class="abstract-dropdown w100">
                         <p>{{$result->abstract}}</p>
                     </div>
                 </article>

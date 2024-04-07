@@ -32,6 +32,7 @@ main > .search-bar > input[type="text"]{
 main .article-container{
     width: 100%;
     padding: 0 20px;
+    margin-bottom: 40px;
 }
 
 main .article-container > article{
@@ -80,7 +81,6 @@ article .bottom{
 article .abstract-dropdown {
     transition: max-height 0.1s ease-out, margin 0.1s ease-in;
     overflow: hidden;
-    max-height: 0;
 }
 
 article .abstract-dropdown > p{
