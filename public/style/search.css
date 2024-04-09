@@ -1,7 +1,7 @@
 main{
     display: flex;
-    width: 60%;
-    margin: auto;
+    max-width: 900px;
+    margin-inline: auto;
     flex-wrap: wrap;
     justify-content: center;
     align-items: flex-start;
@@ -22,6 +22,7 @@ main > .search-bar > input[type="text"]{
     margin-top: 10px;
 }
 .r-search{
+    text-align: center;
     color: var(--primary);
 }
 .r-amount{
@@ -30,7 +31,8 @@ main > .search-bar > input[type="text"]{
 }
 
 main .article-container{
-    width: 100%;
+    min-width: 728px;
+    max-width: 1000px;
     padding: 0 20px;
     margin-bottom: 40px;
 }
@@ -61,6 +63,7 @@ article > .article-content > a{
 
 article > .article-content > .article-right{
     text-decoration: none !important;
+    width: 33%;
 }
 
 article .article-right > button{
@@ -74,7 +77,7 @@ article .article-right > button{
     margin-top: auto;
 }
 article .article-right > button:focus{
-    outline: 2px solid #989898;
+    outline: 3px solid gray;
 }
 
 article .bottom{
@@ -92,4 +95,69 @@ article .abstract-dropdown > p{
     height: 100%;
     margin-top: 20px;
     padding-top: 0;
+}
+
+article .tags-container{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    text-wrap: nowrap;
+}
+
+article .tags-container span{
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 50px;
+    height: 20px;
+    text-align: right;
+    background-color: #f2e3d1;
+    color: var(--text);
+    /* outline: var(--primary) 2px solid; */
+    padding: 10px 5px;
+    border-radius: 5px 20px 20px 5px;
+    margin: 0px 5px;
+}
+
+@media screen and (min-width: 479px) and (max-width: 768px){
+    main{
+        max-width: 700px;
+    }
+    main .article-container{
+        max-width: 700px;
+        min-width: 400px;
+    }
+    main .article-container > article{
+        min-height: 100px;
+        min-width: 300px;
+    }
+    article .abstract-dropdown, article button, article .tags-container{
+        display: none;
+    }
+}
+@media screen and (max-width: 479px) {
+    main{
+        max-width: 400px;
+        min-width: 100px;
+    }
+    main .article-container{
+        max-width: 400px;
+        min-width: 100px;
+    }
+    .article-container article, .article-content{
+        min-height: 100px !important;
+        max-height: fit-content !important;
+    }
+    .article-content{
+        height: 50px !important;
+    }
+    .article-content h3{
+        display: none;
+    }
+    article .abstract-dropdown, article button, article .tags-container, .article-right{
+        display: none;
+    }
 }
