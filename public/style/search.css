@@ -98,7 +98,7 @@ article .abstract-dropdown > p{
 }
 
 article .tags-container{
-    width: 100%;
+    height: 30px;
     display: flex;
     justify-content: flex-end;
     flex-direction: row;
@@ -112,12 +112,12 @@ article .tags-container span{
     justify-content: center;
     align-items: center;
     min-width: 50px;
-    height: 20px;
+    min-height: 5px;
+    max-height: 30px;
     text-align: right;
     background-color: #f2e3d1;
     color: var(--text);
-    /* outline: var(--primary) 2px solid; */
-    padding: 10px 5px;
+    padding: 5px 2px;
     border-radius: 5px 20px 20px 5px;
     margin: 0px 5px;
 }
@@ -127,14 +127,15 @@ article .tags-container span{
         max-width: 700px;
     }
     main .article-container{
-        max-width: 700px;
-        min-width: 400px;
+        max-width: 30% !important;
+        min-width: 100% !important;
     }
     main .article-container > article{
         min-height: 100px;
-        min-width: 300px;
+        min-width: 100%;
+        max-width: 500px;
     }
-    article .abstract-dropdown, article button, article .tags-container{
+    article .abstract-dropdown, article button, article .tags-container, .article-right{
         display: none;
     }
 }
@@ -144,8 +145,8 @@ article .tags-container span{
         min-width: 100px;
     }
     main .article-container{
-        max-width: 400px;
-        min-width: 100px;
+        max-width: 100px;
+        min-width: 400px;
     }
     .article-container article, .article-content{
         min-height: 100px !important;
