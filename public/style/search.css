@@ -52,11 +52,14 @@ main .article-container > article{
 }
 
 article > .article-content{
+    flex-grow: 1;
     height: 125px;
     justify-content: space-between;
 }
 
 article > .article-content > a{
+    max-width: 66%;
+    word-wrap: break-word;
     text-decoration: none;
     cursor: pointer;
 }
@@ -67,14 +70,14 @@ article > .article-content > .article-right{
 }
 
 article .article-right > button{
-    background-color: var(--primary);
-    color: white;
+    width: 40%;
+    background-color: var(--secondary-background);
     border: none;
     border-radius: 5px;
     padding: 5px;
     cursor: pointer;
     transition: background-color 0.2s ease-out;
-    margin-top: auto;
+    margin: auto 0 0 auto;
 }
 article .article-right > button:focus{
     outline: 3px solid gray;
@@ -130,23 +133,33 @@ article .tags-container span{
         max-width: 30% !important;
         min-width: 100% !important;
     }
-    main .article-container > article{
-        min-height: 100px;
-        min-width: 100%;
-        max-width: 500px;
-    }
-    article .abstract-dropdown, article button, article .tags-container, .article-right{
+    article .tags-container{
         display: none;
+    }
+    article .article-content a{
+        max-width: fit-content;
+    }
+    article .article-right{
+        width: 0px !important; 
+    }
+    .article-right button{
+        position: relative;
+        width: 100px !important;
+        bottom: 5px;
+        right: 100px;
     }
 }
 @media screen and (max-width: 479px) {
+    header img{
+        width: 300px;
+    }
     main{
-        max-width: 400px;
-        min-width: 100px;
+        padding: 0;
+        max-width: 100%;
     }
     main .article-container{
-        max-width: 100px;
-        min-width: 400px;
+        max-width: 30% !important;
+        min-width: 100% !important;
     }
     .article-container article, .article-content{
         min-height: 100px !important;
@@ -155,8 +168,8 @@ article .tags-container span{
     .article-content{
         height: 50px !important;
     }
-    .article-content h3{
-        display: none;
+    .article-content > a{
+        max-width: 100% !important;
     }
     article .abstract-dropdown, article button, article .tags-container, .article-right{
         display: none;
