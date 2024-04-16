@@ -3,9 +3,14 @@ main > .form-search{
 }
 
 main > .form-search > input[type="text"] {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    vertical-align: middle;
     width: 50%;
     height: 50px;
     padding: 10px;
+    line-height: 50px;
     font-size: 1.2rem;
     border-radius: 5px;
     background-color: white;
