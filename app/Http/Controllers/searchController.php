@@ -36,9 +36,8 @@ class searchController extends Controller
                     "title" => $request->input('search'),
                     "subtitle" => "Subtitle 2", // Add subtitle property
                     "tags" => [
-                        (object)["name" => "tag1"],
-                        (object)["name" => "tag2"],
-                        (object)["name" => "tag3"]
+                        (object)["name" => "Fordon"],
+                        (object)["name" => "webbutveckling"],
                     ],
                     "abstract" => "Detta är ett gymnasiearbete som handlar om något annat" . str_repeat(" Detta är ett gymnasiearbete som handlar om något annat", 3)
                 ],
@@ -54,9 +53,8 @@ class searchController extends Controller
                     'title' => 'Gymnasiearbete 1',
                     'subtitle' => 'Subtitle 1', // Add subtitle property
                     "tags" => [
-                        (object)["name" => "tag1"],
-                        (object)["name" => "tag2"],
-                        (object)["name" => "tag3"]
+                        (object)["name" => "Fordon"],
+                        (object)["name" => "webbutveckling"],
                     ],
                     'abstract' => 'Detta är ett gymnasiearbete som handlar om något' . str_repeat(" Detta är ett gymnasiearbete som handlar om något", 3)
                 ],

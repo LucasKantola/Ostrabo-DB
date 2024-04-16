@@ -48,6 +48,19 @@ main .article-container > article{
 
     flex-grow: 1;
     flex-shrink: 1;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+main .article-container > article:hover{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+}
+main .article-container > article:hover .article-content a{
+    text-decoration: underline;
+}
+main .article-container > article:hover .article-right > button,
+main .article-container > article:hover .abstract-dropdown {
     text-decoration: none !important;
 }
 
@@ -59,9 +72,22 @@ article > .article-content{
 
 article > .article-content > a{
     max-width: 66%;
+    min-width: 66%;
     word-wrap: break-word;
     text-decoration: none;
     cursor: pointer;
+}
+
+article a h2{
+    color: var(--primary);
+    font-size: 1.5em;
+    margin: 0;
+    padding: 0;
+}
+
+article a:focus h2{
+    text-decoration: underline !important;
+    filter: brightness(1.1);
 }
 
 article > .article-content > .article-right{
@@ -86,6 +112,7 @@ article .article-right > button:focus{
 article .bottom{
     margin-bottom: 5px;
     margin-top: auto;
+    color: var(--text);
 }
 
 article .abstract-dropdown {
@@ -97,7 +124,9 @@ article .abstract-dropdown > p{
     width: auto;
     height: 100%;
     margin-top: 20px;
+    padding-bottom: 5px;
     padding-top: 0;
+    line-height: 20px;
 }
 
 article .tags-container{
@@ -120,7 +149,8 @@ article .tags-container span{
     text-align: right;
     background-color: #f2e3d1;
     color: var(--text);
-    padding: 5px 2px;
+    padding: 5px 5px;
+    padding-right: 8px;
     border-radius: 5px 20px 20px 5px;
     margin: 0px 5px;
 }

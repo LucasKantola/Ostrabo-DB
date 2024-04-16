@@ -26,7 +26,7 @@ function toggleAbstract(event, id) {
         </div>
         <div class="article-container flex-column flex-center">
             @forelse($results as $result)
-                <article class="w100 selectable">
+                <article class="w100">
                     <div class="w100 article-content flex-row">
                         <a href="{{route("show", $result->id)}}" class="article-left flex-column h100">
                             <h2>{{$result->title}}</h2>
