@@ -56,8 +56,14 @@ main .article-container > article{
 main .article-container > article:hover{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
 }
-main .article-container > article:hover .article-content a{
+main .article-container > article:hover .article-content a h2{
     text-decoration: underline;
+    text-decoration-color: var(--primary);
+    filter:hue-rotate(-10deg);
+}
+main .article-container > article:hover .article-content a .bottom p{
+    text-decoration: underline;
+    text-decoration-color: var(--text) !important;
 }
 main .article-container > article:hover .article-right > button,
 main .article-container > article:hover .abstract-dropdown {
@@ -87,7 +93,7 @@ article a h2{
 
 article a:focus h2{
     text-decoration: underline !important;
-    filter: brightness(1.1);
+    filter: brightness(1.2);
 }
 
 article > .article-content > .article-right{
