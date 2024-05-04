@@ -4,7 +4,7 @@
 <body>
     @include('../defaults/header')
     <main>
-        
+        <img src="{{asset($data->images)}}" alt="">
     </main>
     @include('../defaults/footer')
 </body>

@@ -10,7 +10,7 @@ class ViewController extends Controller
 {
     function show(Request $request){
         $data = DB::table('papers')->where('paper_id', $request->id)->get();
-        return view('show')->with('data', $data)->with('id', $request->id)->with("request", $request);
+        return view('show')->with('data', $data[0]);
     }
     function index(Request $request){
         if(!empty($request)){
